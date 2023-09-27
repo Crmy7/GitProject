@@ -1,5 +1,4 @@
 <template>
-
   <div>
     <section>
       <h2>Tous les produits</h2>
@@ -7,6 +6,7 @@
         <div v-for="joke in jokes" :key="joke.id">
           <div>
             <h2>{{ joke.title }}</h2>
+            <p>😁</p>
           </div>
           <p>{{ joke.id }}</p>
         </div>
