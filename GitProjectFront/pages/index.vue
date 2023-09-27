@@ -18,7 +18,7 @@
 
               </div>
 
-              <p>{{ joke.id }}€</p>
+              <p>{{ joke.id }}</p>
 
 
 
