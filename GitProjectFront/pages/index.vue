@@ -1,16 +1,106 @@
 <template>
 
-    <h1 class="">Hello World</h1>
+
+    <div>
+
+      <section>
+
+        <h2>Tous les produits</h2>
+
+        <div>
+
+          <div v-for="joke in jokes" :key="joke.id">
 
 
-</template>
+              <div>
 
-<script>
+                <h2>{{ joke.title }}</h2>
+
+              </div>
+
+              <p>{{ joke.id }}€</p>
 
 
-export default {
-    mounted() {
-        
-    }
-}
-</script>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </template>
+
+  
+
+  <script>
+
+  import Header from "../components/Header";
+
+  import { ref, onMounted } from "vue";
+
+  import axios from "axios";
+
+
+
+  export default {
+
+    components: {
+
+      Header,
+
+
+    },
+
+    setup() {
+
+      const jokes = ref([]);
+
+  
+
+      onMounted(() => {
+
+        // Effectuez une requête GET vers l'API Symfony pour récupérer les produits en utilisant Axios
+
+        axios
+
+          .get('http://127.0.0.1:8000/api/jokes', {
+
+            headers: {
+
+              'Content-Type': 'application/json',
+
+              'Accept': 'application/json'
+
+            }
+
+          })
+
+          .then(response => {
+
+            jokes.value = response.data;
+
+          })
+
+          .catch(error => {
+
+            console.error('Erreur lors de la récupération des produits :', error);
+
+          });
+
+      });
+
+  
+
+      return {
+
+        jokes,
+
+      };
+
+    },
+
+  };
+
+  </script>
