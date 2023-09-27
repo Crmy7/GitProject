@@ -1,70 +1,49 @@
 <template>
 
-
-    <div>
-
-      <section>
-
-        <h2>Tous les produits</h2>
-
-        <div>
-
-          <div v-for="joke in jokes" :key="joke.id">
-
-
-              <div>
-
-                <h2>{{ joke.title }}</h2>
-
-              </div>
-
-              <p>{{ joke.id }}</p>
-              <p>😁</p>
-
-
-
+  <div>
+    <section>
+      <h2>Tous les produits</h2>
+      <div>
+        <div v-for="joke in jokes" :key="joke.id">
+          <div>
+            <h2>{{ joke.title }}</h2>
           </div>
-
+          <p>{{ joke.id }}</p>
+          <p>😁</p>
         </div>
+      </div>
+    </section>
+  </div>
+</template>
 
-      </section>
+<script>
 
-    </div>
+import Header from "../components/Header";
 
-  </template>
+import {ref, onMounted} from "vue";
 
-  
-
-  <script>
-
-  import Header from "../components/Header";
-
-  import { ref, onMounted } from "vue";
-
-  import axios from "axios";
+import axios from "axios";
 
 
+export default {
 
-  export default {
+  components: {
 
-    components: {
-
-      Header,
+    Header,
 
 
-    },
+  },
 
-    setup() {
+  setup() {
 
-      const jokes = ref([]);
+    const jokes = ref([]);
 
-  
 
-      onMounted(() => {
+    onMounted(() => {
 
-        // Effectuez une requête GET vers l'API Symfony pour récupérer les produits en utilisant Axios
+      // Effectuez une requête GET vers l'API Symfony pour récupérer les produits en utilisant Axios
 
-        axios
+      axios
 
           .get('http://127.0.0.1:8000/api/jokes', {
 
@@ -90,18 +69,17 @@
 
           });
 
-      });
+    });
 
-  
 
-      return {
+    return {
 
-        jokes,
+      jokes,
 
-      };
+    };
 
-    },
+  },
 
-  };
+};
 
-  </script>
+</script>
