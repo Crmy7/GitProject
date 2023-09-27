@@ -9,7 +9,6 @@
             <h2>{{ joke.title }}</h2>
           </div>
           <p>{{ joke.id }}</p>
-          <p>😁</p>
         </div>
       </div>
     </section>
