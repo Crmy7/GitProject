@@ -1,6 +1,8 @@
 <template>
-    <h1 class="text bg-green-500 ">Hello Word</h1>
-    <p>test</p>
+
+    <h1 class="">Hello World</h1>
+
+
 </template>
 
 <script>
