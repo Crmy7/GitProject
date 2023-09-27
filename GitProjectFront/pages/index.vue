@@ -1,4 +1,5 @@
 <template>
+
   <div>
     <section>
       <h2>Tous les produits</h2>
