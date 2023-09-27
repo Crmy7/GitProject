@@ -1,5 +1,5 @@
 <template>
-    <h1>Hello Word</h1>
+    <h1 class="text bg-green-500 ">Hello Word</h1>
     <p>test</p>
 </template>
 
