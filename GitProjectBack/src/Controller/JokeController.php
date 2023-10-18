@@ -38,6 +38,8 @@ class JokeController extends AbstractController
         return $response;
     }
 
+
+
     #[Route('/api/jokes/{id}', name: 'api_joke_show')]
     public function apiJokeShow(Joke $joke): JsonResponse
     {
