@@ -1,7 +1,7 @@
 <template>
   <div>
     <section>
-      <h2>Tous les produits</h2>
+      <h2 style="color: white">Tous les produits</h2>
       <div>
         <div v-for="joke in jokes" :key="joke.id">
           <div>
