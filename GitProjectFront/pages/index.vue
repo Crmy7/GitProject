@@ -1,9 +1,9 @@
 <template>
   <div>
     <section>
-      <h2>Tous les produits</h2>
+      <h2 class="text-white">Tous les produits</h2>
       <div>
-        <div v-for="joke in jokes" :key="joke.id">
+        <div v-for="joke in jokes" :key="joke.id" class="text-white">
           <div>
             <h2>{{ joke.title }}</h2>
             <p>😁</p>
@@ -16,6 +16,7 @@
 </template>
 
 <script>
+
 
 import Header from "../components/Header";
 
