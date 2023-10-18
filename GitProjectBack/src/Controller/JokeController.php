@@ -35,4 +35,14 @@ class JokeController extends AbstractController
         // Retournez la réponse
         return $response;
     }
+
+    #[Route('/api/test', name: 'test')]
+    public function testApi(JokeRepository $jokeRepository): JsonResponse
+    {
+        $response = new JsonResponse(["C'est super ça marche"]);
+
+        $response->headers->set('Access-Control-Allow-Origin', '*');
+
+        return $response;
+    }
 }
