@@ -1,13 +1,14 @@
 <template>
-    <div>
-        <h2>Joke Single</h2>
-        <div v-if="joke">
+    <div class="flex justify-center items-center w-full flex-wrap">
+        
+        <div class="flex flex-wrap md:max-w-7xl flex-col w-full text-white">
+            <h1 class="text-7xl	text-white">Joke Single</h1>
+            <div v-if="joke">
             <h2>{{ joke.title }}</h2>
             <p>{{ joke.content }}</p>
         </div>
-        <div v-else>
-            <p>Joke non trouvé</p>
         </div>
+        
     </div>
 </template>
   
