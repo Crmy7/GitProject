@@ -1,17 +1,10 @@
 <template>
-  <div>
-    <section>
-      <h2 class="text-white">Tous les produits</h2>
-      <div>
-        <div v-for="joke in jokes" :key="joke.id" class="text-white">
-          <div>
-            <h2>{{ joke.title }}</h2>
-            <p>😁</p>
-          </div>
-          <p>{{ joke.id }}</p>
-        </div>
-      </div>
-    </section>
+  <div class="">
+    <div class="flex justify-center align-items-center py-16 font-bold text-4xl">
+      <h1 class="text-white text-center">Pires Blagues, Meilleurs Sourires : <br> Là où l'Absurde Devient Drôle!</h1>
+    </div>
+    
+    
   </div>
 </template>
 
